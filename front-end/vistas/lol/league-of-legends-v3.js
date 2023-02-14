@@ -11,8 +11,16 @@ function funcion_main()
     // Consulta al back-end y espera que traiga todos los datos del ranking de lol
     fetch('https://the-fools-viewer.onrender.com/league-ranking')
     .then((response) => response.json())
-    .then((array_data_obtenida) => 
+    .then((json_data_obtenida) => 
     {
+        console.log(json_data_obtenida);
+
+        let array_data_obtenida = [];
+        json_data_obtenida.forEach(element => 
+        {
+            array_data_obtenida.push(element);
+        });
+
         console.log(array_data_obtenida);
         acciones_finales(array_data_obtenida); 
     });
