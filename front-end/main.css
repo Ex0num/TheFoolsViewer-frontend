@@ -1,0 +1,263 @@
+/* ============================================ I N D E X (pag) ================================================== */
+
+/*----------------- Implementacion de fuentes ----------------------*/
+@font-face 
+{
+    font-family: questrial;
+    src: url(./assets/fonts/Questrial/Questrial-Regular.ttf);
+}
+
+/*--------- Configuracion del cursor y estilado general ------------*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'questrial';
+    /*cursor: url("./assets/cursores/cursor1.png"),auto; */
+}
+
+li
+{
+    list-style: none;
+}
+
+.separador-lineal
+{
+  border: 1px solid white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*------------------- Configuracion del background ------------------*/
+body
+{
+    /* background-image: url("./assets/background-2.gif"); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; */
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0%; 
+}
+
+/*------------------- Header ------------------*/
+#header
+{
+    font-size: 20px;
+    background-color: #010a13;
+    color: white;
+    text-align: center;
+    opacity: 85%;
+}
+
+#opcion1, #opcion2, #opcion3
+{
+    color: white;
+    display: inline-block;
+    margin-left: 18vw;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.separador-lineal-header
+{
+    border: 1px solid white;
+}
+
+/*------------------- Contenido // Seccion fotos ------------------*/
+#contenido-presentaciones
+{
+  width: 100%;
+}
+
+#contenedor-lol, #contenedor-valorant, #contenedor-csgo
+{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#imagen-lol, #imagen-val, #imagen-csgo
+{
+  border-bottom: 1px solid white;
+}
+
+#imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
+{
+  font-size: 32px;
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  border: 1px solid white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#imagen-lol:hover + #imagen-lol-subtitulo, #imagen-val:hover + #imagen-val-subtitulo, #imagen-csgo:hover + #imagen-csgo-subtitulo
+{
+  opacity: 1;
+  animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#imagen-lol:not(:hover) + #imagen-lol-subtitulo
+{
+  animation: slide-out-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* -------------------- ANIMACIONES DE ENTRADA -------------------- */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* -------------------- ANIMACIONES DE SALIDA -------------------- */
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+/**
+* ----------------------------------------
+* animation slide-out-left
+* ----------------------------------------
+*/
+ @-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+0% {
+  letter-spacing: -0.5em;
+  opacity: 0;
+}
+40% {
+  opacity: 0.6;
+}
+100% {
+  opacity: 1;
+}
+}
+
+/*====================================== Responsive Media-Querys ======================================*/
+/* Responsiveness del HEADER */
+@media (max-width: 1001px) 
+{
+  #opcion1, #opcion2, #opcion3
+  {
+    margin: 0px;
+  }
+}
+
+/* Responsiveness de IMAGENES PRINCIPALES */
+@media (max-width: 1000px)
+{
+  #imagen-lol, #imagen-val, #imagen-csgo
+  {
+    height: 30rem;
+  }
+
+  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
+  {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  #imagen-lol, #imagen-val, #imagen-csgo
+  {
+    height: 15rem;
+  }
+
+  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
+  {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1500px)
+{
+  #imagen-lol, #imagen-val, #imagen-csgo
+  {
+    height: 50rem;
+  }
+
+  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
+  {
+    font-size: 22px;
+  }
+}
