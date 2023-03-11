@@ -1,4 +1,4 @@
-/* ============================================ I N D E X (pag) ================================================== */
+/* ============================================ LoL (pag) ================================================== */
 
 /*----------------- Implementacion de fuentes ----------------------*/
 @font-face 
@@ -16,26 +16,14 @@
     /*cursor: url("./assets/cursores/cursor1.png"),auto; */
 }
 
-li
-{
-    list-style: none;
-}
-
-.separador-lineal
-{
-  border: 1px solid white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 /*------------------- Configuracion del background ------------------*/
 body
 {
-    /* background-image: url("./assets/background-2.gif"); */
-    /* background-repeat: no-repeat;
+    background-image: url("./assets/league-of-legends/braum.png");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; */
+    background-attachment: fixed; 
     width: 100%;
     max-width: 100%;
     margin-right: 0%; 
@@ -66,198 +54,243 @@ body
     border: 1px solid white;
 }
 
-/*------------------- Contenido // Seccion fotos ------------------*/
-#contenido-presentaciones
+#contenedor-de-tabla
 {
-  width: 100%;
+    text-align: center;
 }
 
-#contenedor-lol, #contenedor-valorant, #contenedor-csgo
+#titulo-lol
 {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+    font-size: 22px;
+    background-color: black;
+    opacity: 80%;
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 2rem;
+    color: white;
+    padding: 0.5rem;
 }
 
-#imagen-lol, #imagen-val, #imagen-csgo
+#mensaje-esperando
 {
-  border-bottom: 1px solid white;
+    font-size: 22px;
+    background-color: black;
+    opacity: 80%;
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    padding: 0.5rem;
 }
 
-#imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
+#tabla-lol
 {
-  font-size: 32px;
-  text-align: center;
-  width: 90%;
-  position: absolute;
-  bottom: 50%;
-  right: 0;
-  padding: 10px;
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-  border: 1px solid white;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+    width: 100%;
+    opacity: 80%;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 18px;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-#imagen-lol:hover + #imagen-lol-subtitulo, #imagen-val:hover + #imagen-val-subtitulo, #imagen-csgo:hover + #imagen-csgo-subtitulo
+.fila-data-jugador:hover
 {
-  opacity: 1;
-  animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    opacity: 100%;
+    background-color: rgb(36, 35, 35);
+    /* border: 1px solid white; */
 }
 
-#imagen-lol:not(:hover) + #imagen-lol-subtitulo
+tr
 {
-  animation: slide-out-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    height: 3.5rem;
 }
 
-/* -------------------- ANIMACIONES DE ENTRADA -------------------- */
-@-webkit-keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+#fila-header
+{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 1px solid white;
+    animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-/* -------------------- ANIMACIONES DE SALIDA -------------------- */
-@keyframes slide-out-right {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
+.foto-rank
+{
+    width: 50px;
+    height: 50px; 
 }
 
-/**
-* ----------------------------------------
-* animation slide-out-left
-* ----------------------------------------
-*/
- @-webkit-keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-    opacity: 0;
-  }
-}
-@keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-    opacity: 0;
-  }
+.celda-wins
+{
+    color: green;
 }
 
+.celda-loses
+{
+    color:red
+}
+
+a
+{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* ---------------- Responsiveness de la tabla ---------------- */
+@media (max-width: 1000px)
+{
+    .fila-header-opgg, .celda-opgg
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 775px)
+{
+    .fila-header-league, .celda-league
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .fila-header-points, .celda-points, .fila-header-position, .celda-position
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .fila-header-rank, .celda-rank
+    {
+        display: none;
+    }
+}
+
+/* ----------------------Animaciones------------------------- */
 
 /**
  * ----------------------------------------
  * animation tracking-in-expand
  * ----------------------------------------
  */
- @-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 @keyframes tracking-in-expand {
 0% {
-  letter-spacing: -0.5em;
-  opacity: 0;
+    letter-spacing: -0.5em;
+    opacity: 0;
 }
 40% {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 100% {
-  opacity: 1;
+    opacity: 1;
 }
 }
 
-/*====================================== Responsive Media-Querys ======================================*/
-/* Responsiveness del HEADER */
-@media (max-width: 1001px) 
-{
-  #opcion1, #opcion2, #opcion3
-  {
-    margin: 0px;
+/**
+ * ----------------------------------------
+ * animation flip-in-ver-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes flip-in-ver-left {
+    0% {
+      -webkit-transform: rotateY(80deg);
+              transform: rotateY(80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 1;
+    }
   }
-}
-
-/* Responsiveness de IMAGENES PRINCIPALES */
-@media (max-width: 1000px)
-{
-  #imagen-lol, #imagen-val, #imagen-csgo
-  {
-    height: 30rem;
+  @keyframes flip-in-ver-left {
+    0% {
+      -webkit-transform: rotateY(80deg);
+              transform: rotateY(80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 80%;
+    }
   }
-
-  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
-  {
-    font-size: 18px;
+  
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-}
-
-@media (max-width: 600px)
-{
-  #imagen-lol, #imagen-val, #imagen-csgo
-  {
-    height: 15rem;
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-
-  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
-  {
-    font-size: 16px;
+  
+  /**
+ * ----------------------------------------
+ * animation tracking-out-contract
+ * ----------------------------------------
+ */
+  @-webkit-keyframes tracking-out-contract {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
   }
-}
-
-@media (min-width: 1500px)
-{
-  #imagen-lol, #imagen-val, #imagen-csgo
-  {
-    height: 50rem;
+  @keyframes tracking-out-contract {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
   }
-
-  #imagen-lol-subtitulo, #imagen-val-subtitulo, #imagen-csgo-subtitulo
-  {
-    font-size: 22px;
-  }
-}
+  
