@@ -72,7 +72,7 @@ function funcion_main_wholeDataUF()
     {
         //Le pregunto al back-end por la data de un player. 
         //(Luego 'http://localhost:3000/player-data' es reemplazado por el link publico de la api)
-        fetch('http://localhost:3000/player-data', 
+        fetch('https://the-fools-viewer.onrender.com/player-data', 
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
