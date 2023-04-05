@@ -22,8 +22,19 @@ setTimeout(() =>
     swal("¡Estamos en pre-alpha!", "Recuerda que estamos iniciando en este proyecto y todo tipo de error podrá ser reportado en el repositorio de Github. https://github.com/Ex0num/TheFoolsViewer/issues o comunicado al Discord EXONUM#5778", "info");
 }, 1500);
 
+let botonQuienSoy = document.getElementById("opcion2");
+botonQuienSoy.addEventListener("click", ()=> 
+{
+    swal({
+        title: '¿Quién soy?',
+        text: 'Me llamo Gabriel y soy programador. ' + 'Me recibí en la Universidad Tecnológica Nacional (UTN). Me podés encontrar como Ex0num en Github.',
+        icon: './assets/quien-soy.png',
+        imageAlt: 'Happy face',
+      });
+});
+
 // ================================== Ejecucion de codigo ======================================= //
-funcion_main_wholeDataUF();
+// funcion_main_wholeDataUF();
 
 // ================================ Funcion - Padre/Main ======================================= //
 function funcion_main_wholeData() 

@@ -29,6 +29,16 @@ body
     margin-right: 0%; 
 }
 
+.swal-text 
+{
+  text-align: center;
+}
+
+.like-img
+{
+  background-image: url('./assets/like.png');
+}
+
 /*------------------- Header ------------------*/
 #header
 {
