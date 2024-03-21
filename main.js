@@ -73,15 +73,15 @@ async function buscar_data_jugador(user_data)
     try 
     {
         //--- Buscar en el back-end la data de un jugador ---//
-        // fetch('https://the-fools-viewer.onrender.com/player-data',
-        response = await fetch('http://localhost:3000/player-data',
+        let response = fetch('https://the-fools-viewer.onrender.com/player-data',
+        // let response = await fetch('http://localhost:3000/player-data',
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({playerID: user_data.id_invocador})
         })
 
-        return response
+        return response;
     } 
     catch (error) {console.error('Error:', error);}
 }
