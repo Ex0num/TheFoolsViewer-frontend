@@ -102,6 +102,13 @@ tr {height: 3.5rem;}
     margin-right: 5px;
 }
 
+.foto-medalla
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
 .celda-wins
 {
     font-weight: 800;
@@ -159,6 +166,23 @@ a:hover
     text-align: left;
     padding-left: 25px;
 }
+
+
+/* Si es 1° */
+.celda-position[data-position="1 °"] {
+    background-color: yellow;
+}
+
+/* Si es 2° */
+.celda-position[data-position="2 °"] {
+    background-color: grey;
+}
+
+/* Si es 3° */
+.celda-position[data-position="3 °"] {
+    background-color: brown;
+}
+
 
 /* ---------------- Responsiveness de la tabla ---------------- */
 @media (max-width: 1000px)

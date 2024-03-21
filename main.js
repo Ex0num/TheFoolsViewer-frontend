@@ -4,6 +4,7 @@ setTimeout(() =>
     swal("¡Version 2.0 publicada!", 
     "La nueva versión 2.0 ya fue publicada.\nHay nuevos cambios realizados...\n"+
     "\n-Codigo rescrito, reorganizado y optimizado en su totalidad. Limpieza y ordenamiento."+
+    "\n-Iconos medallas de 1° 2° y 3° lugar."+
     "\n-Icono de fuego (Hotstreak - 3 partidas seguidas ganadas) nuevo."+
     "\n-Campos 'wins' y 'loses' ahora son resaltados."+
     "\n-Iconos de invocadores añadidos."+
@@ -116,9 +117,7 @@ function ordenar_e_insertar_jugador_obtenido(usuario_a_ser_agregado)
         }
 
         // Si el usuario no se insertó en ninguna posición, lo agregamos al final
-        if (!usuario_insertado) {
-            data_jugadores.push(usuario_a_ser_agregado);
-        }
+        if (!usuario_insertado) {data_jugadores.push(usuario_a_ser_agregado);}
         resolve(data_jugadores);
     });
 }
@@ -323,15 +322,38 @@ function obtener_src_foto_rango_correspondiente(rango_recibido)
     return resultado_src;
 }
 
-function finalizar_loading_tabla() 
-{
+function finalizar_loading_tabla() {
     let mensaje_esperando = document.getElementById("mensaje-esperando");
     mensaje_esperando.setAttribute("hidden", "true");
 
     let filas_jugadores = document.querySelectorAll(".fila-data-jugador");
-    filas_jugadores.forEach((fila, index) => 
-    {
+    filas_jugadores.forEach((fila, index) => {
         let celda_position = fila.querySelector(".celda-position");
         celda_position.textContent = (index + 1) + " °";
+
+        // Añadir clases adicionales a las primeras tres filas
+        if (index < 3) {
+            fila.classList.add("primeras-tres");
+
+            // Crear la imagen de la medalla
+            let img_medalla = document.createElement("img");
+
+            // Determinar la ruta de la imagen de la medalla
+            let src_img_medalla;
+            if (index === 0) {
+                src_img_medalla = "./assets/gold-medal.png"; // Ruta para la medalla de bronce
+            } else if (index === 1) {
+                src_img_medalla = "./assets/silver-medal.png"; // Ruta para la medalla de plata
+            } else if (index === 2) {
+                src_img_medalla = "./assets/bronze-medal.png"; // Ruta para la medalla de oro
+            }
+
+            // Configurar los atributos de la imagen de la medalla
+            img_medalla.setAttribute("src", src_img_medalla);
+            img_medalla.classList.add("foto-medalla");
+
+            // Insertar la imagen de la medalla en la celda de posición
+            celda_position.appendChild(img_medalla);
+        }
     });
 }
