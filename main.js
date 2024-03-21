@@ -167,14 +167,20 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     celda_opgg.appendChild(link_opgg);
 
     // Creación de la imagen del usuario
-    // let img_user = document.createElement("img");
-    // let src_img_profile = obj_data_total_del_user.data_account["icon_url"];
-    // img_user.setAttribute("src", src_img_profile);
-    // img_user.classList = "foto-icon";
+    let img_user = document.createElement("img");
+    let src_img_profile = obj_data_total_del_user.data_account["icon_url"];
+    img_user.setAttribute("src", src_img_profile);
+    img_user.classList = "foto-icon";
 
-    // // Agregar la imagen al lado del nombre del usuario
-    // celda_summoner.appendChild(img_user); // Agregar la imagen a la celda de summoner
-    // console.log(celda_summoner); // Asegúrate de que celda_summoner contenga la imagen
+    // Agregar la imagen al lado del nombre del usuario
+    setTimeout(() => {
+        // Obtener el primer hijo de celda_summoner
+        let firstChild = celda_summoner.firstChild;
+        // Insertar la imagen antes del primer hijo
+        celda_summoner.insertBefore(img_user, firstChild);
+        img_user.classList = "foto-user";
+        console.log(celda_summoner); // Asegúrate de que celda_summoner contenga la imagen
+    }, 1500);
 
     // Agregado de información a cada celda
     celda_position.innerHTML = "? " + "°";
@@ -190,6 +196,27 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     celda_points.innerHTML = obj_data_total_del_user.data_league["lp"] + " " + "LP";
     celda_played.innerHTML = obj_data_total_del_user.data_league["played"];
     celda_winrate.innerHTML = obj_data_total_del_user.data_league["winrate"] + "%";
+
+    // Creación de la imagen del hotstreak
+    if (obj_data_total_del_user.data_league.hotStreak)
+    {
+        let img_hotStreak = document.createElement("img");
+        let src_img_hotStreak = "./assets/fuego.png";
+        img_hotStreak.setAttribute("src", src_img_hotStreak);
+        img_user.classList = "foto-hotstreak";
+    
+        // Agregar la imagen al lado del nombre del winrate
+        setTimeout(() => 
+        {
+            // Obtener el primer hijo de celda_winrate
+            let firstChild = celda_winrate.firstChild;
+            // Insertar la imagen antes del primer hijo
+            celda_winrate.insertBefore(img_hotStreak, firstChild);
+            img_hotStreak.classList = "foto-hotstreak";
+            console.log(celda_winrate); // Asegúrate de que celda_winrate contenga la imagen
+        }, 1500);
+    }
+
     celda_wins.innerHTML = obj_data_total_del_user.data_league["wins"];
     celda_loses.innerHTML = obj_data_total_del_user.data_league["loses"];
     link_opgg.innerHTML = obj_data_total_del_user.data_account["opgg"];
