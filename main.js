@@ -3,8 +3,10 @@ setTimeout(() =>
 {
     swal("¡Version 2.0 publicada!", 
     "La nueva versión 2.0 ya fue publicada.\nHay nuevos cambios realizados...\n"+
-    "\n-Codigo rescrito, reorganizado y optimizado en su 90%"+
+    "\n-Codigo rescrito, reorganizado y optimizado en su totalidad. Limpieza y ordenamiento."+
+    "\n-Icono de fuego (Hotstreak - 3 partidas seguidas ganadas) nuevo."+
     "\n-Campos 'wins' y 'loses' ahora son resaltados."+
+    "\n-Iconos de invocadores añadidos."+
     "\n-Rango esmeralda añadido."+
     "\n-Background nuevo."+
     "\n-Header removido.", "info");
