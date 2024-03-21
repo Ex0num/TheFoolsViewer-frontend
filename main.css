@@ -13,13 +13,13 @@
     margin: 0;
     padding: 0;
     font-family: 'questrial';
-    /*cursor: url("./assets/cursores/cursor1.png"),auto; */
+    cursor: url("./assets/customized-cursor.jpg"),auto;
 }
 
 /*------------------- Configuracion del background ------------------*/
 body
 {
-    background-image: url("./assets/league-of-legends/braum.png");
+    background-image: url("./assets/league-of-legends/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -29,67 +29,17 @@ body
     margin-right: 0%; 
 }
 
-.swal-text 
-{
-  text-align: center;
-}
-
-.like-img
-{
-  background-image: url('./assets/like.png');
-}
-
-/*------------------- Header ------------------*/
-#header
-{
-    font-size: 20px;
-    background-color: #010a13;
-    color: white;
-    text-align: center;
-    opacity: 85%;
-}
-
-#opcion1, #opcion2, #opcion3
-{
-    color: white;
-    display: inline-block;
-    margin-left: 18vw;
-    padding-bottom: 0px;
-    margin-bottom: 4px;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-.separador-lineal-header
-{
-    border: 1px solid white;
-}
-
-#contenedor-de-tabla
-{
-    text-align: center;
-}
+.swal-text {text-align: left; font-weight: 600; font-family: 'Courier New', Courier, monospace;}
+#contenedor-de-tabla {text-align: center;}
 
 #titulo-lol
 {
     font-size: 22px;
-    background-color: black;
+    background-color: #000000d7;
     opacity: 80%;
     text-align: center;
     border-radius: 18px;
     margin-top: 2rem;
-    color: white;
-    padding: 0.5rem;
-}
-
-#mensaje-esperando
-{
-    font-size: 22px;
-    background-color: black;
-    opacity: 80%;
-    text-align: center;
-    border-radius: 18px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     color: white;
     padding: 0.5rem;
 }
@@ -98,7 +48,7 @@ body
 {
     width: 100%;
     opacity: 80%;
-    background-color: black;
+    background-color: #000000d7;
     color: whitesmoke;
     border-radius: 18px;
     margin-top: 2rem;
@@ -107,26 +57,29 @@ body
     margin-bottom: 2rem;
 }
 
-.fila-data-jugador:hover
-{
-    opacity: 100%;
-    background-color: rgb(36, 35, 35);
-    /* border: 1px solid white; */
-}
-
-tr
-{
-    height: 3.5rem;
-}
+tr {height: 3.5rem;}
 
 #fila-header
 {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    border-bottom: 1px solid white;
     animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+#mensaje-esperando
+{
+    font-size: 22px;
+    background-color: #000000d7;
+    opacity: 80%;
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+/* ---------------- Campos de los objetos creados dinamicamente ---------------- */
 .foto-rank
 {
     width: 50px;
@@ -135,11 +88,13 @@ tr
 
 .celda-wins
 {
+    font-weight: 800;
     color: green;
 }
 
 .celda-loses
 {
+    font-weight: 800;
     color:red
 }
 
@@ -147,160 +102,123 @@ a
 {
     color: whitesmoke;
     text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover
+{
+    color: #007bff;
+}
+
+.celda-position,
+.celda-rank,
+.celda-summoner,
+.celda-league,
+.celda-points,
+.celda-played,
+.celda-winrate,
+.celda-wins,
+.celda-loses,
+.celda-opgg
+{
+    transition: font-size 0.5s;
+}
+
+.celda-position:hover,
+.celda-rank:hover,
+.celda-summoner:hover,
+.celda-league:hover,
+.celda-points:hover,
+.celda-played:hover,
+.celda-winrate:hover,
+.celda-wins:hover,
+.celda-loses:hover,
+.celda-opgg:hover
+{
+    font-size: 17px;
 }
 
 /* ---------------- Responsiveness de la tabla ---------------- */
 @media (max-width: 1000px)
 {
-    .fila-header-opgg, .celda-opgg
-    {
-        display: none;
-    }
+    .fila-header-opgg, 
+    .celda-opgg 
+    {display: none;}
 }
 
 @media (max-width: 775px)
 {
-    .fila-header-league, .celda-league
-    {
-        display: none;
-    }
+    .fila-header-league, 
+    .celda-league
+    {display: none;}
 }
 
 @media (max-width: 500px)
 {
-    .fila-header-points, .celda-points, .fila-header-position, .celda-position
-    {
-        display: none;
-    }
+    .fila-header-points, 
+    .celda-points, 
+    .fila-header-position, 
+    .celda-position
+    {display: none;}
 }
 
 @media (max-width: 400px)
 {
-    .fila-header-rank, .celda-rank
-    {
-        display: none;
-    }
+    .fila-header-rank, 
+    .celda-rank 
+    {display: none;}
 }
 
 /* ----------------------Animaciones------------------------- */
 
 /**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
+* ----------------------------------------
+* animation tracking-in-expand
+* ----------------------------------------
+*/
+@-webkit-keyframes tracking-in-expand 
+{
+    0% {letter-spacing: -0.5em; opacity: 0;}
+    40% {opacity: 0.6;}
+    100% {opacity: 1;}
 }
-@keyframes tracking-in-expand {
-0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-}
-40% {
-    opacity: 0.6;
-}
-100% {
-    opacity: 1;
-}
+@keyframes tracking-in-expand 
+{
+    0% {letter-spacing: -0.5em; opacity: 0;}
+    40% {opacity: 0.6;}
+    100% {opacity: 1;}
 }
 
 /**
- * ----------------------------------------
- * animation flip-in-ver-left
- * ----------------------------------------
- */
- @-webkit-keyframes flip-in-ver-left {
-    0% {
-      -webkit-transform: rotateY(80deg);
-              transform: rotateY(80deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes flip-in-ver-left {
-    0% {
-      -webkit-transform: rotateY(80deg);
-              transform: rotateY(80deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-      opacity: 80%;
-    }
-  }
-  
+* ----------------------------------------
+* animation flip-in-ver-left
+* ----------------------------------------
+*/
+@-webkit-keyframes flip-in-ver-left 
+{
+    0% {-webkit-transform: rotateY(80deg); transform: rotateY(80deg); opacity: 0;}
+    100% {-webkit-transform: rotateY(0); transform: rotateY(0); opacity: 1;}
+}
+@keyframes flip-in-ver-left 
+{
+    0% {-webkit-transform: rotateY(80deg); transform: rotateY(80deg); opacity: 0;}
+    100% {-webkit-transform: rotateY(0); transform: rotateY(0); opacity: 80%;}
+}
+
 /**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
- @-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /**
- * ----------------------------------------
- * animation tracking-out-contract
- * ----------------------------------------
- */
-  @-webkit-keyframes tracking-out-contract {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-  }
-  @keyframes tracking-out-contract {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-  }
-  
+* ----------------------------------------
+* animation tracking-out-contract
+* ----------------------------------------
+*/
+@-webkit-keyframes tracking-out-contract 
+{
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {letter-spacing: -0.5em; opacity: 0;}
+}
+@keyframes tracking-out-contract 
+{
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {letter-spacing: -0.5em; opacity: 0;}
+}
