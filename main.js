@@ -179,7 +179,7 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
         // Insertar la imagen antes del primer hijo
         celda_summoner.insertBefore(img_user, firstChild);
         img_user.classList = "foto-user";
-        console.log(celda_summoner); // Asegúrate de que celda_summoner contenga la imagen
+        // console.log(celda_summoner); // Asegúrate de que celda_summoner contenga la imagen
     }, 1500);
 
     // Agregado de información a cada celda
