@@ -21,19 +21,19 @@ async function start_process()
     let usuarios_analizados = 
     [
         {"nombre": "Toti (Main)", "id_invocador": "RxQFcX6l_WmOwhMwzmzpkgVGtQq4EZ5FdwVFWI_fE9KP8JA"},
-        // {"nombre": "Gaby (Main)", "id_invocador": "9IjkTELeH0LWJQS9UcpVVoK9dWc8hiEhCS7Gpe73c2sA_w"},
-        // {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
-        // {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
-        // {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
-        // {"nombre": "Agus", "id_invocador": "EprSpg7jpL9V2K-NeBewCWywt_3xAG9VqBmXW_TdMGkGJw"}, //Agus (MAIN)
-        // {"nombre": "Guido", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"}, //Guido (SMURF)
-        // {"nombre": "Juan", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"}, //Juan (MAIN)
-        // {"nombre": "Moti", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"}, //Moti (MAIN)
-        // {"nombre": "Chola", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"}, //Chola (MAIN)
-        // {"nombre": "Ale", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"}, //Ale (MAIN)
-        // {"nombre": "Ivo", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"}, //Ivo (SMURF)
-        // {"nombre": "Marculi", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"}, //Marculi (MAIN)
-        // {"nombre": "Joaco", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"} //Joaco (MAIN)
+        {"nombre": "Gaby (Main)", "id_invocador": "9IjkTELeH0LWJQS9UcpVVoK9dWc8hiEhCS7Gpe73c2sA_w"},
+        {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
+        {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
+        {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
+        {"nombre": "Agus", "id_invocador": "EprSpg7jpL9V2K-NeBewCWywt_3xAG9VqBmXW_TdMGkGJw"}, //Agus (MAIN)
+        {"nombre": "Guido", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"}, //Guido (SMURF)
+        {"nombre": "Juan", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"}, //Juan (MAIN)
+        {"nombre": "Moti", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"}, //Moti (MAIN)
+        {"nombre": "Chola", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"}, //Chola (MAIN)
+        {"nombre": "Ale", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"}, //Ale (MAIN)
+        {"nombre": "Ivo", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"}, //Ivo (SMURF)
+        {"nombre": "Marculi", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"}, //Marculi (MAIN)
+        {"nombre": "Joaco", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"} //Joaco (MAIN)
     ]
     
     await procesar_jugadores(usuarios_analizados)
