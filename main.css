@@ -24,12 +24,13 @@ body
     background-position: center center;
     background-attachment: fixed; 
     width: 100%;
-    max-width: 100%;
+    min-width: 1200px;
+    /* max-width: 100%; */
     margin-right: 0%; 
 }
 
 .swal-text {text-align: left; font-weight: 600;}
-#contenedor-de-tabla {text-align: center;}
+.contenedor {margin: 1rem;}
 
 #titulo-lol
 {
@@ -46,6 +47,7 @@ body
 #tabla-lol
 {
     width: 100%;
+    min-width: 1200px;
     opacity: 80%;
     background-color: #000000d7;
     color: whitesmoke;
@@ -60,6 +62,8 @@ tr {height: 3.5rem;}
 
 #fila-header
 {
+    width: 100%;
+    min-width: 1200px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -167,32 +171,24 @@ a:hover
     padding-left: 25px;
 }
 
-
-/* Si es 1° */
-.celda-position[data-position="1 °"] {
-    background-color: yellow;
-}
-
-/* Si es 2° */
-.celda-position[data-position="2 °"] {
-    background-color: grey;
-}
-
-/* Si es 3° */
-.celda-position[data-position="3 °"] {
-    background-color: brown;
-}
-
-
 /* ---------------- Responsiveness de la tabla ---------------- */
-@media (max-width: 1000px)
+/* @media (max-width: 1000px)
 {
     .fila-header-opgg, 
     .celda-opgg 
     {display: none;}
+} */
+
+@media (max-width: 700px)
+{
+    .contenedor
+    {
+        overflow-x: auto;
+        max-width: 700px;
+    }
 }
 
-@media (max-width: 775px)
+/* @media (max-width: 775px)
 {
     .fila-header-league, 
     .celda-league
@@ -213,7 +209,7 @@ a:hover
     .fila-header-rank, 
     .celda-rank 
     {display: none;}
-}
+} */
 
 /* ----------------------Animaciones------------------------- */
 

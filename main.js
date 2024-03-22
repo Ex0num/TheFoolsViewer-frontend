@@ -4,7 +4,6 @@ setTimeout(() =>
     swal("¡Version 2.0 publicada!", 
     "La nueva versión 2.0 ya fue publicada.\nHay nuevos cambios realizados...\n"+
     "\n-Codigo rescrito, reorganizado y optimizado en su totalidad. Limpieza y ordenamiento."+
-    "\n-Iconos medallas de 1° 2° y 3° lugar."+
     "\n-Icono de fuego (Hotstreak - 3 partidas seguidas ganadas) nuevo."+
     "\n-Campos 'wins' y 'loses' ahora son resaltados."+
     "\n-Iconos de invocadores añadidos."+
@@ -25,20 +24,20 @@ async function start_process()
     [
         {"nombre": "Toti (Main)", "id_invocador": "RxQFcX6l_WmOwhMwzmzpkgVGtQq4EZ5FdwVFWI_fE9KP8JA"},
         {"nombre": "Gaby (Main)", "id_invocador": "9IjkTELeH0LWJQS9UcpVVoK9dWc8hiEhCS7Gpe73c2sA_w"},
-        {"nombre": "Gaby (Smurf) chad adc", "id_invocador": "jelz0i0T7kwSLFhqCyVhByAmADXz7vxN4jGw3byWAtNYIa0zW-MYDpikGA"},
-        {"nombre": "Gaby (Smurf) Jikatuki", "id_invocador": "bkiT7osAyC-VoQyDxK2vyBmcs1Ef1VajS8OOwJ44nk4Xa1M"},
-        {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
-        {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
-        {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
+        // {"nombre": "Gaby (Smurf) chad adc", "id_invocador": "jelz0i0T7kwSLFhqCyVhByAmADXz7vxN4jGw3byWAtNYIa0zW-MYDpikGA"},
+        // {"nombre": "Gaby (Smurf) Jikatuki", "id_invocador": "bkiT7osAyC-VoQyDxK2vyBmcs1Ef1VajS8OOwJ44nk4Xa1M"},
+        // {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
+        // {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
+        // {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
         {"nombre": "Agus (Main)", "id_invocador": "EprSpg7jpL9V2K-NeBewCWywt_3xAG9VqBmXW_TdMGkGJw"},
-        {"nombre": "Guido (Smurf)", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"},
-        {"nombre": "Juan (Main)", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"},
-        {"nombre": "Motiel (Main)", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"},
-        {"nombre": "Chola (Main)", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"},
-        {"nombre": "Ale (Main)", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"},
-        {"nombre": "Ivo (Smurf)", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"},
-        {"nombre": "Marculi (Main)", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"},
-        {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"}
+        // {"nombre": "Guido (Smurf)", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"},
+        // {"nombre": "Juan (Main)", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"},
+        // {"nombre": "Motiel (Main)", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"},
+        // {"nombre": "Chola (Main)", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"},
+        // {"nombre": "Ale (Main)", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"},
+        // {"nombre": "Ivo (Smurf)", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"},
+        // {"nombre": "Marculi (Main)", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"},
+        // {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"}
     ]
     
     await procesar_jugadores(usuarios_analizados)
@@ -78,8 +77,8 @@ async function buscar_data_jugador(user_data)
     try 
     {
         //--- Buscar en el back-end la data de un jugador ---//
-        let response = fetch('https://the-fools-viewer.onrender.com/player-data',
-        // let response = await fetch('http://localhost:3000/player-data',
+        // let response = fetch('https://the-fools-viewer.onrender.com/player-data',
+        let response = await fetch('http://localhost:3000/player-data',
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -109,14 +108,14 @@ function ordenar_e_insertar_jugador_obtenido(usuario_a_ser_agregado)
                     usuario_a_ser_agregado.data_league.lp === usuario_actual.data_league.lp &&
                     usuario_a_ser_agregado.data_league.winrate > usuario_actual.data_league.winrate)) 
             {
-                // Insertar el nuevo usuario en la posición actual
+                //--- Insertar el nuevo usuario en la posición actual ---//
                 data_jugadores.splice(i, 0, usuario_a_ser_agregado);
                 usuario_insertado = true;
                 break;
             }
         }
 
-        // Si el usuario no se insertó en ninguna posición, lo agregamos al final
+        //--- Si el usuario no se insertó en ninguna posición, lo agregamos al final ---//
         if (!usuario_insertado) {data_jugadores.push(usuario_a_ser_agregado);}
         resolve(data_jugadores);
     });
@@ -128,11 +127,11 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     console.log(" ------ INICIANDO CARGA SINGULAR A TABLA ------");
     let tabla_html = document.getElementById("tabla-lol");
 
-    // Creación de la fila de data total
+    //--- Creación de la fila de data total ---//
     let nueva_fila = document.createElement("tr");
     nueva_fila.classList = "fila-data-jugador";
 
-    // Creación de cada celda de data
+    //--- Creación de cada celda de data ---//
     let celda_position = document.createElement("td");
     celda_position.classList = "celda-position";
 
@@ -167,23 +166,19 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     link_opgg.setAttribute("href", obj_data_total_del_user.data_account["opgg"]);
     celda_opgg.appendChild(link_opgg);
 
-    // Creación de la imagen del usuario
+    //--- Creación de la imagen del usuario ---//
     let img_user = document.createElement("img");
     let src_img_profile = obj_data_total_del_user.data_account["icon_url"];
     img_user.setAttribute("src", src_img_profile);
     img_user.classList = "foto-icon";
 
-    // Agregar la imagen al lado del nombre del usuario
+    //--- Agregar la imagen al lado del nombre del usuario ---//
     setTimeout(() => {
-        // Obtener el primer hijo de celda_summoner
         let firstChild = celda_summoner.firstChild;
-        // Insertar la imagen antes del primer hijo
         celda_summoner.insertBefore(img_user, firstChild);
         img_user.classList = "foto-user";
-        // console.log(celda_summoner); // Asegúrate de que celda_summoner contenga la imagen
-    }, 1500);
+    }, 10);
 
-    // Agregado de información a cada celda
     celda_position.innerHTML = "? " + "°";
 
     let img_rank = document.createElement("img");
@@ -198,7 +193,7 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     celda_played.innerHTML = obj_data_total_del_user.data_league["played"];
     celda_winrate.innerHTML = obj_data_total_del_user.data_league["winrate"] + "%";
 
-    // Creación de la imagen del hotstreak
+    //--- Creación de la imagen del hotstreak ---//
     if (obj_data_total_del_user.data_league.hotStreak)
     {
         let img_hotStreak = document.createElement("img");
@@ -206,23 +201,20 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
         img_hotStreak.setAttribute("src", src_img_hotStreak);
         img_user.classList = "foto-hotstreak";
     
-        // Agregar la imagen al lado del nombre del winrate
+        //--- Agregar la imagen al lado del nombre del winrate ---//
         setTimeout(() => 
         {
-            // Obtener el primer hijo de celda_winrate
             let firstChild = celda_winrate.firstChild;
-            // Insertar la imagen antes del primer hijo
             celda_winrate.insertBefore(img_hotStreak, firstChild);
             img_hotStreak.classList = "foto-hotstreak";
-            console.log(celda_winrate); // Asegúrate de que celda_winrate contenga la imagen
-        }, 1500);
+        }, 10);
     }
 
     celda_wins.innerHTML = obj_data_total_del_user.data_league["wins"];
     celda_loses.innerHTML = obj_data_total_del_user.data_league["loses"];
     link_opgg.innerHTML = obj_data_total_del_user.data_account["opgg"];
 
-    // Obtener la posición correcta del jugador en la tabla
+    //--- Obtener la posición correcta del jugador en la tabla ---//
     let posicion = data_jugadores.findIndex((jugador) => jugador.data_account.nombreInvocador === obj_data_total_del_user.data_account.nombreInvocador);
     if (posicion === -1) 
     {
@@ -230,15 +222,15 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
         return;
     }
 
-    // Insertar la fila en la posición correspondiente en la tabla
+    //--- Insertar la fila en la posición correspondiente en la tabla ---//
     if (posicion === 0) 
     {
-        tabla_html.insertBefore(nueva_fila, tabla_html.getElementsByClassName("fila-data-jugador")[0]); // Insertar antes de la primera fila de datos
+        tabla_html.insertBefore(nueva_fila, tabla_html.getElementsByClassName("fila-data-jugador")[0]); //--- Insertar antes de la primera fila de datos ---//
     } 
     else 
     {
         let fila_anterior = tabla_html.getElementsByClassName("fila-data-jugador")[posicion - 1];
-        fila_anterior.after(nueva_fila); // Insertar después de la fila anterior
+        fila_anterior.after(nueva_fila); //--- Insertar después de la fila anterior ---//
     }
 
     nueva_fila.appendChild(celda_position);
@@ -252,7 +244,7 @@ async function cargar_data_jugador_a_tabla(obj_data_total_del_user)
     nueva_fila.appendChild(celda_loses);
     nueva_fila.appendChild(celda_opgg);
 
-    nueva_fila.style.animation = "tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both";
+    nueva_fila.style.animation = "tracking-in-expand 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both";
 }
 
 function obtener_src_foto_rango_correspondiente(rango_recibido) 
@@ -322,38 +314,15 @@ function obtener_src_foto_rango_correspondiente(rango_recibido)
     return resultado_src;
 }
 
-function finalizar_loading_tabla() {
+function finalizar_loading_tabla() 
+{
     let mensaje_esperando = document.getElementById("mensaje-esperando");
     mensaje_esperando.setAttribute("hidden", "true");
 
     let filas_jugadores = document.querySelectorAll(".fila-data-jugador");
-    filas_jugadores.forEach((fila, index) => {
+    filas_jugadores.forEach((fila, index) => 
+    {
         let celda_position = fila.querySelector(".celda-position");
         celda_position.textContent = (index + 1) + " °";
-
-        // Añadir clases adicionales a las primeras tres filas
-        if (index < 3) {
-            fila.classList.add("primeras-tres");
-
-            // Crear la imagen de la medalla
-            let img_medalla = document.createElement("img");
-
-            // Determinar la ruta de la imagen de la medalla
-            let src_img_medalla;
-            if (index === 0) {
-                src_img_medalla = "./assets/gold-medal.png"; // Ruta para la medalla de bronce
-            } else if (index === 1) {
-                src_img_medalla = "./assets/silver-medal.png"; // Ruta para la medalla de plata
-            } else if (index === 2) {
-                src_img_medalla = "./assets/bronze-medal.png"; // Ruta para la medalla de oro
-            }
-
-            // Configurar los atributos de la imagen de la medalla
-            img_medalla.setAttribute("src", src_img_medalla);
-            img_medalla.classList.add("foto-medalla");
-
-            // Insertar la imagen de la medalla en la celda de posición
-            celda_position.appendChild(img_medalla);
-        }
     });
 }
