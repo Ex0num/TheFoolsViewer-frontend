@@ -24,20 +24,20 @@ async function start_process()
     [
         {"nombre": "Toti (Main)", "id_invocador": "RxQFcX6l_WmOwhMwzmzpkgVGtQq4EZ5FdwVFWI_fE9KP8JA"},
         {"nombre": "Gaby (Main)", "id_invocador": "9IjkTELeH0LWJQS9UcpVVoK9dWc8hiEhCS7Gpe73c2sA_w"},
-        // {"nombre": "Gaby (Smurf) chad adc", "id_invocador": "jelz0i0T7kwSLFhqCyVhByAmADXz7vxN4jGw3byWAtNYIa0zW-MYDpikGA"},
-        // {"nombre": "Gaby (Smurf) Jikatuki", "id_invocador": "bkiT7osAyC-VoQyDxK2vyBmcs1Ef1VajS8OOwJ44nk4Xa1M"},
-        // {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
-        // {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
-        // {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
+        {"nombre": "Gaby (Smurf) chad adc", "id_invocador": "jelz0i0T7kwSLFhqCyVhByAmADXz7vxN4jGw3byWAtNYIa0zW-MYDpikGA"},
+        {"nombre": "Gaby (Smurf) Jikatuki", "id_invocador": "bkiT7osAyC-VoQyDxK2vyBmcs1Ef1VajS8OOwJ44nk4Xa1M"},
+        {"nombre": "Triky (Main)", "id_invocador": "1RNK1zY-JEBREIaEanev_mQW2KWirAsxoKOWC5Tsse_4tg"},
+        {"nombre": "Guido (Main)", "id_invocador": "2PyroTMGzQuanQDvpoueI-E8Z2_5WtuaCyz4nlk9Tluk9A"},
+        {"nombre": "Ivo (Main)", "id_invocador": "e0rpd1SD_14CZc-_60tNTtrTWJ643pw-0nKHsTZ-QCyU-g"},
         {"nombre": "Agus (Main)", "id_invocador": "EprSpg7jpL9V2K-NeBewCWywt_3xAG9VqBmXW_TdMGkGJw"},
-        // {"nombre": "Guido (Smurf)", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"},
-        // {"nombre": "Juan (Main)", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"},
-        // {"nombre": "Motiel (Main)", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"},
-        // {"nombre": "Chola (Main)", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"},
-        // {"nombre": "Ale (Main)", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"},
-        // {"nombre": "Ivo (Smurf)", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"},
-        // {"nombre": "Marculi (Main)", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"},
-        // {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"}
+        {"nombre": "Guido (Smurf)", "id_invocador": "isLvrqJwcikcV8u9lk8gDn1YJ5dU7cdovmNdQTyRAgeoY2mwW-_SopyDPA"},
+        {"nombre": "Juan (Main)", "id_invocador": "sk87DFeyCInogMyG1ULyMgf6licgiQgdJmsVYJspLbiL7A"},
+        {"nombre": "Motiel (Main)", "id_invocador": "NkZznLIkzOK7iIT-3HpUPqbPZrCTU05PUnFxBDM7ovuXo2c"},
+        {"nombre": "Chola (Main)", "id_invocador": "uBj1o_hjGc5LZ5eudHb0XDYpeNI3nQXCAc-TCLFXS0NKfw"},
+        {"nombre": "Ale (Main)", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"},
+        {"nombre": "Ivo (Smurf)", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"},
+        {"nombre": "Marculi (Main)", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"},
+        {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"}
     ]
     
     await procesar_jugadores(usuarios_analizados)
@@ -77,8 +77,8 @@ async function buscar_data_jugador(user_data)
     try 
     {
         //--- Buscar en el back-end la data de un jugador ---//
-        // let response = fetch('https://the-fools-viewer.onrender.com/player-data',
-        let response = await fetch('http://localhost:3000/player-data',
+        let response = fetch('https://the-fools-viewer.onrender.com/player-data',
+        // let response = await fetch('http://localhost:3000/player-data',
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
