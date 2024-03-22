@@ -324,5 +324,21 @@ function finalizar_loading_tabla()
     {
         let celda_position = fila.querySelector(".celda-position");
         celda_position.textContent = (index + 1) + " °";
+
+        //--- Añadir clases adicionales a las primeras tres imagenes ---//
+        if (index < 3) 
+        {
+            // fila.classList.add("primeras-tres");
+
+            let img_medalla = document.createElement("img");
+            let src_img_medalla;
+            if (index === 0) {src_img_medalla = "./assets/gold-medal.png";} 
+            else if (index === 1) {src_img_medalla = "./assets/silver-medal.png";} 
+            else if (index === 2) {src_img_medalla = "./assets/bronze-medal.png";}
+
+            img_medalla.setAttribute("src", src_img_medalla);
+            img_medalla.classList.add("foto-medalla");
+            celda_position.appendChild(img_medalla);
+        }
     });
 }
