@@ -19,7 +19,7 @@ start_process();
 // ================================ Funcion - Padre/Main ======================================= //
 async function start_process() 
 {
-    //--- IDS Usuarios buscados ---//
+    //--- IDS Usuarios buscados (Campo 'id')---//
     let usuarios_analizados = 
     [
         {"nombre": "Toti (Main)", "id_invocador": "RxQFcX6l_WmOwhMwzmzpkgVGtQq4EZ5FdwVFWI_fE9KP8JA"},
@@ -37,7 +37,9 @@ async function start_process()
         {"nombre": "Ale (Main)", "id_invocador": "U5NMUcj8JEjoQcW1oYH9UH8nJO-b3d7k0XLadB9a7IhCRA"},
         {"nombre": "Ivo (Smurf)", "id_invocador": "l5_FrQsY02hVaOtkQeFH2wq-xwQd8GtM2bqEsZbql1nz00M"},
         {"nombre": "Marculi (Main)", "id_invocador": "jK4qvnk1RIb5X03-FTtcdxpAabZYgbBoZXVdQtEqer4fnw"},
-        {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"}
+        {"nombre": "Joaco (Main)", "id_invocador": "ECqn_c2If9y7jRkqBH_aSKGLIIwPr8F4Yl-6ZxC_lyoW8txMVVyx_xTyQw"},
+        {"nombre": "Aledesma (Main)", "id_invocador": "F4MVJyOaq5tTr_wB0lMSppcL4EGb4b7uCe6Hx_ES7mxwNQ"},
+        {"nombre": "Aledesma (Smurf)", "id_invocador": "rFyf2l6akS0riCMYDQVA96dU-jUOuaYYZJFskyj8rzXqRsNcEJJq9VIcNg"}
     ]
     
     await procesar_jugadores(usuarios_analizados)
